@@ -123,6 +123,8 @@
   .rs-media img, .rs-media video{width:100%; height:100%; object-fit:cover; display:block}
   .rs-media.contain img{object-fit:contain; background:#fff}
   .rs-media.contain{background:#fff}
+  .rs-media.video{aspect-ratio:16/9; background:#000}
+  .rs-media.video video{object-fit:contain}
   .rs-card.wide .rs-media{aspect-ratio:21/9}
   .rs-body{padding:12px 14px 14px; display:flex; flex-direction:column; gap:8px; flex:1}
   .rs-body{color:#f3f6fb; text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.7)}
@@ -327,7 +329,7 @@
     </div>
     <div class="rs-grid">
       <div class="rs-card">
-        <div class="rs-media"><video src="media/d1-tsrobot-natcomm.mp4" poster="media/d1-tsrobot-natcomm.jpg" autoplay muted loop playsinline preload="metadata" controls controlslist="nodownload" aria-label="TS-Robot supplementary video (Nature Communications 2024)"></video></div>
+        <div class="rs-media video"><video src="media/d1-tsrobot-natcomm.mp4" poster="media/d1-tsrobot-natcomm.jpg" autoplay muted loop playsinline preload="metadata" controls controlslist="nodownload" aria-label="TS-Robot supplementary video (Nature Communications 2024)"></video></div>
         <div class="rs-body">
           <p><b>TS-Robot</b> — a sub-millimetre-thick soft robot driven by a thin-shell DEA with negative-Poisson-ratio tensioning, capable of crawling, turning, floor-to-wall transition, cooperation and manipulation.</p>
           <div class="rs-tags"><a class="tag-paper" href="#pub-natcomm">Paper · Nat. Commun. 2024</a><a class="tag-project" href="#proj-reinstate">Project · REINSTATE</a></div>
