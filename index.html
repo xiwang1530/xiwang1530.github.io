@@ -119,12 +119,13 @@
   .rs-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
   .rs-card{border:1px solid rgba(255,255,255,.22); border-radius:14px; background:transparent; box-shadow:0 8px 24px rgba(0,0,0,.25); overflow:hidden; display:flex; flex-direction:column}
   .rs-card.wide{grid-column:span 2}
+  a.rs-media{display:block}
   .rs-media{position:relative; aspect-ratio:16/10; background:transparent; overflow:hidden; border-radius:10px}
   .rs-media img, .rs-media video{width:100%; height:100%; object-fit:cover; display:block}
   .rs-media.contain img{object-fit:contain; background:#fff}
   .rs-media.contain{background:#fff}
   .rs-media.video{aspect-ratio:16/9; background:#000}
-  .rs-media.video video{object-fit:contain}
+  .rs-media.video video, .rs-media.video img{object-fit:contain}
   .rs-card.wide .rs-media{aspect-ratio:21/9}
   .rs-body{padding:12px 14px 14px; display:flex; flex-direction:column; gap:8px; flex:1}
   .rs-body{color:#f3f6fb; text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.7)}
@@ -329,52 +330,24 @@
     </div>
     <div class="rs-grid">
       <div class="rs-card">
-        <div class="rs-media video"><video src="media/d1-tsrobot-natcomm.mp4" poster="media/d1-tsrobot-natcomm.jpg" autoplay muted loop playsinline preload="metadata" controls controlslist="nodownload" aria-label="TS-Robot supplementary video (Nature Communications 2024)"></video></div>
+        <div class="rs-media video"><video src="media/m1-1-tsrobot.mp4" poster="media/m1-1-poster.jpg" autoplay muted loop playsinline preload="metadata" controls controlslist="nodownload" aria-label="TS-Robot: multimodal locomotion for exploration of narrow spaces"></video></div>
         <div class="rs-body">
-          <p><b>TS-Robot</b> — a sub-millimetre-thick soft robot driven by a thin-shell DEA with negative-Poisson-ratio tensioning, capable of crawling, turning, floor-to-wall transition, cooperation and manipulation.</p>
-          <div class="rs-tags"><a class="tag-paper" href="#pub-natcomm">Paper · Nat. Commun. 2024</a><a class="tag-project" href="#proj-reinstate">Project · REINSTATE</a></div>
+          <p><b>TS-Robot family — multimodal locomotion in narrow spaces.</b> A sub-millimetre-thick soft robot built from a thin-shell DEA with negative-Poisson-ratio tensioning and electrostatic adhesive pads. Type-A/B/C and twin, serial-kinematic and flying variants crawl, climb, steer, swim, switch between floor and wall, manipulate objects and cooperate, and enter the 1.2&nbsp;mm air gap of an aero-engine generator.</p>
+          <div class="rs-tags"><a class="tag-paper" href="#pub-natcomm">Paper · Nat. Commun. 2024</a><a class="tag-paper" href="#pub-sms">Paper · Smart Mater. Struct. 2025</a><a class="tag-paper" href="#pub-icrca">Paper · ICRCA 2025</a><a class="tag-project" href="#proj-reinstate">Project · REINSTATE</a></div>
         </div>
       </div>
       <div class="rs-card">
-        <div class="rs-media contain"><img src="media/d1-tsrobot-typec.jpg" alt="Type-C and untethered TS-Robots" loading="lazy"></div>
+        <div class="rs-media video"><video src="media/m1-2-gen1-gen2.mp4" poster="media/m1-2-poster.jpg" autoplay muted loop playsinline preload="metadata" controls controlslist="nodownload" aria-label="Toward thin soft robots: generation one and two"></video></div>
         <div class="rs-body">
-          <p><b>Fast-moving &amp; untethered TS-Robots</b> — a silicone-based Type-C soft-rigid hybrid reaching 43&nbsp;mm/s (1.16&nbsp;BL/s), and an untethered version carrying its own high-voltage electronics.</p>
-          <div class="rs-tags"><a class="tag-paper" href="#pub-sms">Paper · Smart Mater. Struct. 2025</a><a class="tag-paper" href="#pub-taros">Paper · TAROS 2026</a></div>
+          <p><b>Toward thin soft robots — Generation 1 &amp; 2.</b> Gen&nbsp;1: “butterfly” and “X” amplified-stroke linear DEAs whose negative-stiffness tensioning mechanisms enlarge in-plane displacement. Gen&nbsp;2: a 1.2&nbsp;mm-thick bi-stable thin soft robot that snaps between stable states to amplify DEA stroke and force, crawling through a 4&nbsp;mm gap while carrying 35.6× its own weight.</p>
+          <div class="rs-tags"><a class="tag-paper" href="#pub-jmr">Paper · J. Mech. Robot. 2025</a><a class="tag-paper" href="#pub-ral">Paper · IEEE RA-L 2025</a></div>
         </div>
       </div>
       <div class="rs-card">
-        <div class="rs-media"><img src="media/d1-bistable-ral.jpg" alt="Bi-stable thin soft robot" loading="lazy"></div>
+        <a class="rs-media video contain" href="media/m1-3-taros-poster.jpg" target="_blank" rel="noopener" title="Open poster at full size"><img src="media/m1-3-taros-poster.jpg" alt="TAROS 2026 poster: Untethered thin dielectric elastomer actuated soft robot" loading="lazy"></a>
         <div class="rs-body">
-          <p><b>Bi-stable thin soft robot</b> — a 1.2&nbsp;mm-thick in-plane crawler whose bi-stable mechanism amplifies DEA stroke and force, carrying 35.6× its own weight.</p>
-          <div class="rs-tags"><a class="tag-paper" href="#pub-ral">Paper · IEEE RA-L 2025</a></div>
-        </div>
-      </div>
-      <div class="rs-card">
-        <div class="rs-media contain"><img src="media/d1-asl-dea-jmr.jpg" alt="Amplified-stroke linear DEA with negative-stiffness tensioning" loading="lazy"></div>
-        <div class="rs-body">
-          <p><b>Amplified-stroke linear DEAs</b> — 2D-profile “butterfly” and “X” tensioning mechanisms with negative stiffness that amplify the in-plane stroke of planar DEAs.</p>
-          <div class="rs-tags"><a class="tag-paper" href="#pub-jmr">Paper · J. Mech. Robot. 2025</a></div>
-        </div>
-      </div>
-      <div class="rs-card">
-        <div class="rs-media contain"><img src="media/d1-micro-dea-array.jpg" alt="2 x 2 cone-shaped micro DEA array" loading="lazy"></div>
-        <div class="rs-body">
-          <p><b>Laser-ablated micro-DEA arrays</b> — femtosecond-laser patterning of electrodes enables scalable cone-shaped DEA arrays for smart-surface micro-manipulation with actuator self-sensing.</p>
-          <div class="rs-tags"><a class="tag-paper" href="#rev-soro">Paper · Soft Robotics (revision)</a></div>
-        </div>
-      </div>
-      <div class="rs-card">
-        <div class="rs-media contain"><img src="media/d1-deg-ocean.jpg" alt="Out-of-plane dielectric elastomer generator" loading="lazy"></div>
-        <div class="rs-body">
-          <p><b>Dielectric elastomer generator</b> — an out-of-plane DEG designed and characterised for wave-energy harvesting, extending the same material platform from actuation to energy.</p>
-          <div class="rs-tags"><a class="tag-paper" href="#pub-ocean">Paper · Ocean Eng. 2025</a></div>
-        </div>
-      </div>
-      <div class="rs-card wide">
-        <div class="rs-media contain"><img src="media/d1-generator-airgap.jpg" alt="TS-Robot inspecting the 1.2 mm air gap of a 2.5 MW generator" loading="lazy"></div>
-        <div class="rs-body">
-          <p><b>Application — generator air-gap inspection.</b> TS-Robots crawl through the 1.2&nbsp;mm rotor–stator air gap of a Rolls-Royce 2.5&nbsp;MW generator (AE2100 hybrid power system) to inspect magnet condition without disassembly.</p>
-          <div class="rs-tags"><a class="tag-project" href="#proj-reinstate">Project · REINSTATE</a><a class="tag-paper" href="#pub-natcomm">Paper · Nat. Commun. 2024</a></div>
+          <p><b>Untethered thin DEA soft robot (Gen 3).</b> A 0.34&nbsp;g flexible on-board circuit — 3.7&nbsp;V battery, microcontroller and flyback converter driving a three-channel FPCB up to 220&nbsp;V — powers a 2.34&nbsp;g thin soft robot, enabling untethered crawling at 0.5&nbsp;mm/s on a polyimide substrate with no high-voltage tether.</p>
+          <div class="rs-tags"><a class="tag-paper" href="#pub-taros">Paper · TAROS 2026</a><a class="tag-paper" href="#pub-natcomm">Paper · Nat. Commun. 2024</a><a class="tag-project" href="#proj-replenish">Project · REPLENISH</a></div>
         </div>
       </div>
     </div>
