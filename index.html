@@ -52,9 +52,9 @@
   .nav-toggle{display:none; background:none; border:1px solid var(--border); border-radius:8px; padding:7px 9px; cursor:pointer; color:var(--head)}
 
   /* ---------- Hero ---------- */
-  .hero{display:grid; grid-template-columns:260px 1fr; gap:42px; align-items:start; padding-top:48px}
+  .hero{display:grid; grid-template-columns:220px 1fr; gap:42px; align-items:start; padding-top:48px}
   .photo-col{position:sticky; top:90px}
-  .photo{width:100%; border-radius:16px; box-shadow:var(--shadow); display:block; aspect-ratio:3/4; object-fit:cover}
+  .photo{width:174px; max-width:100%; border-radius:14px; box-shadow:var(--shadow); display:block; aspect-ratio:3/4; object-fit:cover}
   .quicklinks{margin-top:18px; display:flex; flex-direction:column; gap:9px; font-size:.94rem}
   .quicklinks a, .quicklinks .ql{display:flex; align-items:center; gap:10px; color:var(--text)}
   .quicklinks svg{width:17px; height:17px; flex:none; color:var(--accent)}
@@ -234,6 +234,7 @@
   @media (max-width:820px){
     .hero{grid-template-columns:1fr; gap:26px}
     .photo-col{position:static; max-width:230px; margin:0 auto; text-align:center}
+    .photo{width:154px; margin:0 auto}
     .quicklinks{align-items:flex-start; max-width:230px; margin:18px auto 0}
     .intro h1{font-size:2.1rem}
     .grid2{grid-template-columns:1fr}
