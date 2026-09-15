@@ -103,6 +103,11 @@
 
   /* ---------- Research ---------- */
   .rs-intro{color:var(--muted); margin:-6px 0 22px; font-size:.97rem}
+  .rs-themes{margin:-10px 0 24px; padding-left:22px; display:grid; gap:4px}
+  .rs-themes li{font-weight:600; color:var(--head)}
+  .rs-themes li::marker{color:var(--accent); font-weight:700}
+  .rs-themes a{color:var(--head)} .rs-themes a:hover{color:var(--accent-d)}
+  .rs-themes span{font-weight:500; color:var(--muted)}
   .rs-dir{position:relative; margin-bottom:26px; padding:22px 22px 22px; border-radius:18px; overflow:hidden; color:#dfe7f3;
     background:linear-gradient(180deg,rgba(6,16,34,.15),rgba(6,16,34,.45)),url(media/bg-utc-snake.jpg) center/cover no-repeat; box-shadow:var(--shadow)}
   .rs-dir:nth-of-type(2){background-position:center 30%}
@@ -257,10 +262,9 @@
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
     <nav class="navlinks" id="nl">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
       <a href="#research">Research</a>
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
+      <a href="#experience">Education</a>
+      <a href="#fullpubs">Publications</a>
       <a href="#projects">Projects</a>
       <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
@@ -303,32 +307,26 @@
     <p>My work spans flexible actuation, structural and topology optimisation, rigid–flexible coupling, flexible / tactile sensing, and learning-based control. My long-term goal is to build the next generation of automated, intelligent, millimetre-to-centimetre-scale robots that can navigate, perceive and make decisions inside high-value assets — making inspection and maintenance safer, cheaper and greener.</p>
 
     <div class="stats">
-      <div class="stat"><div class="n">18</div><div class="l">Peer-reviewed papers</div></div>
+      <div class="stat"><div class="n">22</div><div class="l">Peer-reviewed papers</div></div>
       <div class="stat"><div class="n">2</div><div class="l">Patents filed</div></div>
-      <div class="stat"><div class="n">7</div><div class="l">UK research projects</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">UK research projects</div></div>
       <div class="stat"><div class="n">1</div><div class="l">Nature Communications</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE / EDUCATION ============ -->
-<section id="experience" class="wrap reveal">
-  <div class="shead"><h2>Experience &amp; Education</h2><span class="line"></span></div>
-  <div class="exp-grid">
-    <div class="exp-card"><div class="exp-logo">UoN</div><div class="org">University of Nottingham</div><div class="deg">Research Fellow · Rolls-Royce UTC</div><div class="yr">Nov 2023 – Present</div></div>
-    <div class="exp-card"><div class="exp-logo">UoN</div><div class="org">University of Nottingham</div><div class="deg">PhD, Manufacturing Engineering</div><div class="yr">2019 – 2024</div></div>
-    <div class="exp-card"><div class="exp-logo">BU</div><div class="org">Beihang University</div><div class="deg">M.Eng., Mechanical Engineering</div><div class="yr">2016 – 2019</div></div>
-    <div class="exp-card"><div class="exp-logo">YU</div><div class="org">Yantai University</div><div class="deg">B.Eng., Mechanical Engineering</div><div class="yr">2011 – 2015</div></div>
-  </div>
-</section>
-
 <!-- ============ RESEARCH ============ -->
 <section id="research" class="wrap reveal">
-  <div class="shead"><h2>Research</h2><span class="line"></span></div>
-  <p class="rs-intro">Robotic technologies for inspection and repair inside confined spaces — from the 1–2&nbsp;mm air gaps of electric aero-engine generators to metre-long entries into engine combustors and nuclear cells. The work is organised around three linked directions; every card links to the corresponding paper, patent or project further down the page.</p>
+  <div class="shead"><h2>Highlighted Research</h2><span class="line"></span></div>
+  <p class="rs-intro">Robotic technologies for inspection and repair inside confined spaces — from the 1–2&nbsp;mm air gaps of electric aero-engine generators to metre-long entries into engine combustors and nuclear cells. My research interests and key contributions fall into three themes:</p>
+  <ol class="rs-themes">
+    <li><a href="#rs-d1">Multimodal-locomotion ultra-thin soft robots <span>(mm scale)</span></a></li>
+    <li><a href="#rs-d2">Modular large-aspect-ratio (&gt;100) continuum robots for long-reach inspection of confined spaces</a></li>
+    <li><a href="#rs-d3">Multimodal sensing &amp; embodied intelligence for soft / continuum robots</a></li>
+  </ol>
 
   <!-- Direction 1 -->
-  <div class="rs-dir">
+  <div class="rs-dir" id="rs-d1">
     <div class="rs-head">
       <div class="rs-num">1</div>
       <div>
@@ -362,7 +360,7 @@
   </div>
 
   <!-- Direction 2 -->
-  <div class="rs-dir">
+  <div class="rs-dir" id="rs-d2">
     <div class="rs-head">
       <div class="rs-num">2</div>
       <div>
@@ -396,7 +394,7 @@
   </div>
 
   <!-- Direction 3 -->
-  <div class="rs-dir">
+  <div class="rs-dir" id="rs-d3">
     <div class="rs-head">
       <div class="rs-num">3</div>
       <div>
@@ -430,85 +428,14 @@
   </div>
 </section>
 
-<!-- ============ NEWS ============ -->
-<div class="alt-bg">
-<section id="news" class="wrap reveal">
-  <div class="shead"><h2>News</h2><span class="line"></span></div>
-  <div class="news">
-    <div class="news-row"><div class="news-date">Jun 2026</div><div class="news-body">Presenting a poster at the <strong>IEEE International Conference on Robotics &amp; Automation (ICRA 2026)</strong>, Vienna, Austria.</div></div>
-    <div class="news-row"><div class="news-date">2025</div><div class="news-body">Four new first-author papers accepted — <em>IEEE Robotics and Automation Letters</em>, <em>Smart Materials and Structures</em>, <em>Ocean Engineering</em>, and <em>Journal of Mechanisms and Robotics</em>.</div></div>
-    <div class="news-row"><div class="news-date">Apr 2025</div><div class="news-body">Gave a flash talk at the <strong>8th IEEE-RAS International Conference on Soft Robotics (RoboSoft 2025)</strong>, Lausanne, Switzerland.</div></div>
-    <div class="news-row"><div class="news-date">2024</div><div class="news-body">Our 8&nbsp;m continuum robot mapped residual radioactivity at the <strong>Dounreay</strong> nuclear site — removing human entry from hazardous zones and <strong>featured by the BBC</strong>.</div></div>
-    <div class="news-row"><div class="news-date">Sep 2024</div><div class="news-body">Presented our soft-robotics research at the <strong>UK-RAS Showcase</strong>, University of Manchester.</div></div>
-    <div class="news-row"><div class="news-date">Jul 2024</div><div class="news-body">First-author paper published in <strong>Nature Communications</strong>: “Multimodal locomotion ultra-thin soft robots for exploration of narrow spaces” — also featured by UoN News. <a href="https://www.nature.com/articles/s41467-024-50598-1" target="_blank" rel="noopener">[paper]</a></div></div>
-    <div class="news-row"><div class="news-date">Jun 2024</div><div class="news-body">Started the <strong>REPLENISH</strong> project (Innovate UK) — pneumatic systems for borescopes and continuum robots for on-wing aero-engine inspection &amp; repair.</div></div>
-    <div class="news-row"><div class="news-date">Jan 2023</div><div class="news-body">“Snakes Everywhere — from aerospace to medical and beyond” recognised at <strong>The Engineer Collaborate to Innovate Awards 2022</strong>, London.</div></div>
-  </div>
-</section>
-</div>
-
-<!-- ============ SELECTED PUBLICATIONS ============ -->
-<section id="publications" class="wrap reveal">
-  <div class="shead"><h2>Selected Publications</h2><span class="line"></span><a class="more" href="#fullpubs">Full list ↓</a></div>
-
-  <div class="pub">
-    <div class="venue">Nature<br>Comms.<br>2024</div>
-    <div>
-      <h3>Multimodal locomotion ultra-thin soft robots for exploration of narrow spaces <span class="badge">Q1</span></h3>
-      <div class="authors"><span class="me">X. Wang</span>, S. Li, J.C. Chang, J. Liu, D. Axinte, X. Dong</div>
-      <div class="meta">Nature Communications, 15(1), 6296, 2024</div>
-      <div class="links"><a href="https://www.nature.com/articles/s41467-024-50598-1" target="_blank" rel="noopener">Paper</a></div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="venue">IEEE<br>RA-L<br>2025</div>
-    <div>
-      <h3>Bi-stable thin soft robot for in-plane locomotion in narrow space <span class="badge">Q1</span></h3>
-      <div class="authors"><span class="me">X. Wang</span>, Y. Liu, J. Tu, J.C. Chang, F. Wang, D. Axinte, X. Dong</div>
-      <div class="meta">IEEE Robotics and Automation Letters, 2025</div>
-      <div class="links"><a href="https://ieeexplore.ieee.org/document/10994506/" target="_blank" rel="noopener">IEEE Xplore</a><a href="https://arxiv.org/abs/2409.20261" target="_blank" rel="noopener">arXiv</a></div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="venue">Smart Mater.<br>Struct.<br>2025</div>
-    <div>
-      <h3>Fast-moving thin soft-rigid hybrid robot driven by in-plane dielectric elastomer actuator <span class="badge">Q1</span></h3>
-      <div class="authors"><span class="me">X. Wang</span>, J.C. Chang, S. Li, C. He, F. Wang, D. Axinte, X. Dong</div>
-      <div class="meta">Smart Materials and Structures, 2025</div>
-      <div class="links"><a href="https://doi.org/10.1088/1361-665X/add067" target="_blank" rel="noopener">Paper (DOI)</a></div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="venue">J. Mech.<br>Robot.<br>2025</div>
-    <div>
-      <h3>Investigation on a class of 2D-profile amplified-stroke dielectric elastomer actuators <span class="badge">Q2</span></h3>
-      <div class="authors"><span class="me">X. Wang</span>, L. Raimondi, D. Axinte, X. Dong</div>
-      <div class="meta">Journal of Mechanisms and Robotics, 17(3), 031008, 2025</div>
-      <div class="links"><a href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article-abstract/17/3/031008/1201946/" target="_blank" rel="noopener">Paper (ASME)</a></div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="venue">Ocean<br>Eng.<br>2025</div>
-    <div>
-      <h3>Design and characterisation of an out-of-plane dielectric elastomer generator for wave energy harvesting <span class="badge">Q1</span></h3>
-      <div class="authors"><span class="me">X. Wang</span>, J. Wang, T. Zhang, S. Li, J.C. Chang, Y. Zhang, T. Zeng, X. Dong</div>
-      <div class="meta">Ocean Engineering, 339, 122148, 2025</div>
-      <div class="links"><a href="https://www.sciencedirect.com/science/article/pii/S0029801825018323" target="_blank" rel="noopener">Paper (ScienceDirect)</a></div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="venue">RCIM<br>2025</div>
-    <div>
-      <h3>Development of a continuum robot with inflatable stiffness-adjustable elements for in-situ repair of aeroengines <span class="badge">Q1</span></h3>
-      <div class="authors">J.C. Chang, H. Dai, <span class="me">X. Wang</span>, D. Axinte, X. Dong</div>
-      <div class="meta">Robotics and Computer-Integrated Manufacturing, 95, 103018, 2025</div>
-      <div class="links"><a href="https://www.sciencedirect.com/science/article/pii/S0736584525000729" target="_blank" rel="noopener">Paper (ScienceDirect)</a></div>
-    </div>
+<!-- ============ EXPERIENCE / EDUCATION ============ -->
+<section id="experience" class="wrap reveal">
+  <div class="shead"><h2>Experience &amp; Education</h2><span class="line"></span></div>
+  <div class="exp-grid">
+    <div class="exp-card"><div class="exp-logo">UoN</div><div class="org">University of Nottingham</div><div class="deg">Research Fellow · Rolls-Royce UTC</div><div class="yr">Nov 2023 – Present</div></div>
+    <div class="exp-card"><div class="exp-logo">UoN</div><div class="org">University of Nottingham</div><div class="deg">PhD, Manufacturing Engineering</div><div class="yr">2019 – 2024</div></div>
+    <div class="exp-card"><div class="exp-logo">BU</div><div class="org">Beihang University</div><div class="deg">M.Eng., Mechanical Engineering</div><div class="yr">2016 – 2019</div></div>
+    <div class="exp-card"><div class="exp-logo">YU</div><div class="org">Yantai University</div><div class="deg">B.Eng., Mechanical Engineering</div><div class="yr">2011 – 2015</div></div>
   </div>
 </section>
 
@@ -573,6 +500,8 @@
 <section id="awards" class="wrap reveal">
   <div class="shead"><h2>Awards &amp; Activities</h2><span class="line"></span></div>
   <ul class="list">
+    <li><div><strong>Best Cross-Sector Technology</strong> — Game Changers “A Decade of Nuclear Innovation” awards (Sellafield Ltd &amp; FIS360), awarded to the University of Nottingham for the disposable snake-robot technology developed in the participated projects <a href="#proj-raico">RAICo 1</a> &amp; <a href="#proj-raico2">RAICo 2</a></div><span class="yr">2026</span></li>
+    <li><div>Poster — Towards Autonomous Robotic Systems (TAROS 2026) conference</div><span class="yr">2026</span></li>
     <li><div>Invited Speaker — Intelligence &amp; Robotics (IR) Youth Forum</div><span class="yr">Jun 2026</span></li>
     <li><div>Poster — IEEE International Conference on Robotics &amp; Automation (ICRA), Vienna, Austria</div><span class="yr">Jun 2026</span></li>
     <li><div>Flash talk — IEEE-RAS International Conference on Soft Robotics (RoboSoft), Lausanne, Switzerland</div><span class="yr">Apr 2025</span></li>
@@ -616,6 +545,7 @@
     <li id="pub-jmr"><span class="me">Wang, X.</span>, Raimondi, L., Axinte, D. &amp; Dong, X. (2025). Investigation on a class of 2D-profile amplified-stroke dielectric elastomer actuators. <span class="v">Journal of Mechanisms and Robotics, 17(3), 031008.</span><span class="q1">Q2</span> <a href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article-abstract/17/3/031008/1201946/" target="_blank" rel="noopener">[link]</a></li>
     <li id="pub-ocean"><span class="me">Wang, X.</span>, Wang, J., Zhang, T., Li, S., Chang, J.C., Zhang, Y., Zeng, T. &amp; Dong, X. (2025). Design and characterisation of the out-of-plane dielectric elastomer generator for wave energy harvesting. <span class="v">Ocean Engineering, 339, 122148.</span><span class="q1">Q1</span> <a href="https://www.sciencedirect.com/science/article/pii/S0029801825018323" target="_blank" rel="noopener">[link]</a></li>
     <li id="pub-taros"><span class="me">Wang, X.</span>, Liu, J., Li, S., Dai, H., Chang, J.C., Axinte, D. &amp; Dong, X. (2026). Untethered thin dielectric-elastomer-actuated soft robot. <span class="v">Accepted, TAROS 2026 (Towards Autonomous Robotic Systems).</span> <a href="https://arxiv.org/abs/2512.17940" target="_blank" rel="noopener">[arXiv]</a></li>
+    <li id="rev-soro">Bogatyrev, A.#, <span class="me">Wang, X.</span>#, Liao, Z., Dong, X. &amp; Axinte, D. (2026). Laser-ablation-induced dielectric-elastomer-driven micro-actuator array enabling scalable smart-surface manipulation. <span class="v">Soft Robotics (accepted).</span></li>
     <li id="pub-icrca"><span class="me">Wang, X.</span>, Li, S., Chang, J.C., Wang, F. &amp; Dong, X. (2025). Biasing-bending DEA-enabled serial-kinematic thin soft robot for locomotion and manipulation in confined spaces. <span class="v">9th Int. Conf. on Robotics, Control and Automation (ICRCA), 116–121, IEEE.</span></li>
     <li id="pub-icira"><span class="me">Wang, X.</span>, Qian, C., Ma, N. &amp; Dong, X. (2021). Design and manufacture of an origami-inspired crawling mini-robot. <span class="v">ICIRA 2021, 425–436.</span></li>
     <li id="pub-icac"><span class="me">Wang, X.</span>, Chang, J.C., Li, S. &amp; Dong, X. (2025). Design and fabrication of a two-degree-of-freedom parallel robot for use in education. <span class="v">30th Int. Conf. on Automation and Computing (ICAC), 1–6, IEEE.</span></li>
@@ -634,7 +564,6 @@
   <ol class="reflist">
     <li id="rev-repc"><span class="me">Wang, X.</span>, Dai, H., Li, S., Chang, J.C., Axinte, D. &amp; Dong, X. Reversible pneumatic composite-fabric stiffening cell for assisting in-situ inspection of aeroengines. <span class="v">Minor revision (resubmitted Aug 2026), Robotics and Computer-Integrated Manufacturing.</span></li>
     <li id="rev-chapter"><span class="me">Wang, X.</span> &amp; Dong, X. Design and control of soft/continuum robots for extreme and challenging environments. <span class="v">Book chapter, under review.</span></li>
-    <li id="rev-soro">Bogatyrev, A.#, <span class="me">Wang, X.</span>#, Liao, Z., Dong, X. &amp; Axinte, D. Laser-ablation-induced dielectric-elastomer-driven micro-actuator array enabling scalable smart-surface manipulation. <span class="v">Accepted, Soft Robotics (2026).</span></li>
     <li id="rev-tro">Chang, J.C., <span class="me">Wang, X.</span>, Axinte, D. &amp; Dong, X. Design, manufacturing and inverse-dynamic modelling of soft parallel robots actuated by dielectric elastomer actuators. <span class="v">Major revision, IEEE Transactions on Robotics.</span> <a href="https://arxiv.org/abs/2409.20344" target="_blank" rel="noopener">[arXiv]</a></li>
     <li id="rev-ion">Li, S., <span class="me">Wang, X.</span>*, Li, K., Zhang, Z., Kong, X., Chen, G., Zhang, Y., Zeng, T. &amp; Dong, X. Investigation on the lightweight circular ion-thruster-driven marine vehicle. <span class="v">Major revision, Robotica.</span></li>
     <li id="rev-review"><span class="me">Wang, X.</span>, Chang, J.C., Dai, H., Axinte, D. &amp; Dong, X. Small-scale soft robotic locomotion: a review from advanced materials to applications. <span class="v">Under review, Advanced Functional Materials.</span></li>
