@@ -104,7 +104,7 @@
   /* ---------- Research ---------- */
   .rs-intro{color:var(--muted); margin:-6px 0 22px; font-size:.97rem}
   .rs-dir{position:relative; margin-bottom:26px; padding:22px 22px 22px; border-radius:18px; overflow:hidden; color:#dfe7f3;
-    background:linear-gradient(180deg,rgba(6,16,34,.28),rgba(6,16,34,.62)),url(media/bg-utc-snake.jpg) center/cover no-repeat; box-shadow:var(--shadow)}
+    background:linear-gradient(180deg,rgba(6,16,34,.35),rgba(6,16,34,.7)),url(media/bg-utc-snake.jpg) center/cover no-repeat; box-shadow:var(--shadow)}
   .rs-dir:nth-of-type(2){background-position:center 30%}
   .rs-dir:nth-of-type(3){background-position:center 70%}
   .rs-dir:last-child{margin-bottom:8px}
@@ -117,16 +117,17 @@
   .rs-head .prob{font-size:.92rem; margin-top:3px}
   .rs-head .prob b{font-weight:600}
   .rs-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-  .rs-card{border:1px solid rgba(255,255,255,.5); border-radius:14px; background:var(--card); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column}
+  .rs-card{border:1px solid rgba(255,255,255,.22); border-radius:14px; background:rgba(10,22,44,.5); backdrop-filter:blur(10px) saturate(140%); -webkit-backdrop-filter:blur(10px) saturate(140%); box-shadow:0 8px 24px rgba(0,0,0,.25); overflow:hidden; display:flex; flex-direction:column}
   .rs-card.wide{grid-column:span 2}
-  .rs-media{position:relative; aspect-ratio:16/10; background:#f2f5f9; overflow:hidden}
+  .rs-media{position:relative; aspect-ratio:16/10; background:rgba(255,255,255,.06); overflow:hidden}
   .rs-media img, .rs-media video{width:100%; height:100%; object-fit:cover; display:block}
   .rs-media.contain img{object-fit:contain; background:#fff}
+  .rs-media.contain{background:#fff}
   .rs-card.wide .rs-media{aspect-ratio:21/9}
   .rs-body{padding:12px 14px 14px; display:flex; flex-direction:column; gap:8px; flex:1}
-  .rs-body{color:var(--text)}
+  .rs-body{color:#e6edf7}
   .rs-body p{margin:0; font-size:.9rem; line-height:1.5}
-  .rs-body p b{color:var(--head); font-weight:600}
+  .rs-body p b{color:#fff; font-weight:600}
   .rs-tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:auto}
   .rs-tags a{font-size:.72rem; font-weight:700; letter-spacing:.3px; padding:3px 9px; border-radius:999px; border:1px solid transparent; text-decoration:none}
   .rs-tags a:hover{text-decoration:none; filter:brightness(.95)}
